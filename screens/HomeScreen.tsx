@@ -1,6 +1,6 @@
 import React from "react";
-import { FlatList, StyleSheet, View } from "react-native";
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { FlatList, StyleSheet, View, Image } from "react-native";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
 import GridItem from "../components/GridItem";
 
@@ -60,6 +60,14 @@ const HomeScreen = (props: Props) => {
   ];
   return (
     <>
+      <View style={styles.logos}>
+        <Image
+          style={styles.tinyLogo}
+          source={{
+            uri: "https://www.kerridgecs.com/files/ocw/kcs_logo_211_x_95_white_bg.png",
+          }}
+        />
+      </View>
       <View style={styles.container}>
         <FlatList
           data={buttons}
@@ -91,5 +99,19 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 8,
+  },
+  logos: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: 30
+  },
+  tinyLogo: {
+    width: 280,
+    height: 100,
+  },
+  logo: {
+    width: 66,
+    height: 58,
   },
 });

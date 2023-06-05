@@ -36,6 +36,12 @@
         {
           "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
         }
+      ],
+      [
+        "react-native-nfc-manager",
+        {
+          "nfcPermission": "Allow $(PRODUCT_NAME) to access nfc."
+        }
       ]
     ]
   }
