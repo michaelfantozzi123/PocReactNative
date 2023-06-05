@@ -37,9 +37,7 @@ const BiometricsScreen = (props: Props) => {
   }, []);
 
   return (
-    <View>
-      
-    </View>
+    <View></View>
   );
 };
 
